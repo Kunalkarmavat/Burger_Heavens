@@ -2,7 +2,7 @@
 
 
  * {
-  /* outline: 1px solid red !important; */
+  outline: 1px solid red !important;
 } 
 
 .bowlby-one-regular {
@@ -18,7 +18,7 @@ h1,h2,h2,h3,h4,h5,h6,li{
 }
 
 
-.about:hover{
+.about{
   box-shadow: 0.4rem 0.4rem;
   transition-duration: 600ms;
 }

@@ -4,7 +4,7 @@ import HeroSection from "../component/HeroSection";
 import MenuHighlights from "../component/MenuHighlights";
 import { colors } from "../App";
 import "../App.css";
-import HorizontalScrollText from "../component/HorizontalText";
+import HorizontalScrollText from "../component/HorizontalScrollText";
 import Restaurant from '../assets/Restaurant.png'; // ✅ Import the image directly
 import HorizontalText from "../component/HorizontalText";
 import RightScribble from "../assets/RightScribble.png"
@@ -23,18 +23,19 @@ function Home() {
       {/* Hero */}
       <HeroSection />
 
+
       {/* Horizontal Scroll Text */}
       {/* <HorizontalScrollText /> */}
 
       {/* About Burger Section */}
-      <section  className="flex flex-col sm:flex-row mx-[2rem] sm:mx-[6rem] p-[4rem] mb-[4rem] bg-[#D1EF53] text-black rounded-2xl">
+      <section  className="flex  flex-col sm:flex-row mx-[2rem] sm:mx-[6rem] p-[4rem] mb-[4rem] bg-[#D1EF53] text-black rounded-2xl">
         <div className="mb-[2rem]">
-          <h3 className="text-2xl sm:mr-[4rem]  sm:text-7xl">
+          <h3 className="text-2xl sm:mr-[6rem]  sm:text-7xl">
             THE BURGER <br/> ABOVE ALL<br/> BURGERS
           </h3>
         </div>
         <div className="">
-          <p className="mb-[2rem] text-[rem] sm:text-1xl">
+          <p className="mb-[2rem] text-[1rem] sm:text-2xl">
             Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit.
             Aenean nec ornare neque.
           </p>
@@ -47,7 +48,9 @@ function Home() {
           </button>
         </div>
       </section>
-
+      <div className="hidden md:block">
+  <HorizontalScrollText />
+</div>
         <MenuHighlights />
       
 
@@ -75,11 +78,11 @@ function Home() {
 
         <div className="relative">
      
-     <img  className=" h-[14rem] sm:h-[20rem] absolute top-[-12rem] left-[-6rem]"  src={RightScribble} alt="burger side" />
+     <img  className=" h-[14rem] sm:h-[20rem] absolute top-[-12rem] sm:top-[-18rem] left-[-6rem]"  src={RightScribble} alt="burger side" />
 
      </div>
       <div className=" mb-[8rem]">
-      <h3 className="text-3xl sm:text-6xl m-auto font-bold mb-[2rem]">
+      <h3 className="text-3xl  text-[#E9E3DC] sm:text-6xl m-auto font-bold mb-[2rem]">
           ORDER ONLINE OR <br/> COME VISIT US TODAY
         </h3>
         <button className="bg-[#D1EF53] text-black font-bold px-[6rem] py-[1rem] mt-2">
@@ -90,7 +93,7 @@ function Home() {
 
       <div className="relative">
      
-      <img  className=" h-[14rem] sm:h-[20rem] absolute bottom-[-4rem] right-[-2rem]"  src={LeftScribble} alt="burger side" />
+      <img  className=" h-[14rem] sm:h-[20rem] absolute sm:bottom-[-3rem] bottom-[-4rem] right-[-2rem] sm:right-[-6rem]"  src={LeftScribble} alt="burger side" />
 
       </div>
 
@@ -98,7 +101,7 @@ function Home() {
       </section>
 
       {/* Footer */}
-      <footer className= "bg-purple-300 text-black mx-[2rem] sm:mx-[6rem]  px-6 sm:px-[88px] pb-8 pt-12  rounded-2xl">
+      <footer className= "bg-purple-300 text-black mx-[2rem] sm:mx-[6rem] sm:py-[4rem]  px-6 sm:px-[88px] pb-8 pt-12  rounded-2xl">
   <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between mb-8">
     
     {/* Logo Section */}
@@ -109,18 +112,18 @@ function Home() {
     {/* More Links */}
     <div>
       <h5 className="font-semibold mb-2">MORE</h5>
-      <ul className="text-sm space-y-2.5">
-        <li>About</li>
-        <li>Menu</li>
-        <li>Locations</li>
-        <li>Privacy</li>
+      <ul className="text-[0.8rem] font-semibold space-y-2.5 ">
+      <p>About</p>
+        <p>Menu</p>
+        <p>Location</p>
+        <p>Privacy</p>
       </ul>
     </div>
 
     {/* Hours */}
     <div>
-      <h5 className="font-semibold mb-2">HOURS</h5>
-      <p className="text-sm">Open from 11AM to 11PM daily</p>
+      <h5 className="font-semibold mb-1">HOURS</h5>
+      <p className="text-[0.8rem] font-semibold leading-[1.9rem]">Open from <br/> 11AM to <br/> 11PM daily</p>
     </div>
 
     {/* Newsletter */}
@@ -128,7 +131,7 @@ function Home() {
       <h5 className="font-semibold mb-2">JOIN OUR NEWSLETTER</h5>
       <div className="flex flex-col sm:flex-row sm:items-center gap-2">
         <input
-          className="p-2 border border-black w-full sm:w-auto"
+          className="p-2 sm:px-[3rem] rounded border border-black w-full sm:w-auto"
           type="text"
           placeholder="Your email"
         />

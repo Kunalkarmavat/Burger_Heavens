@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "../App.css"
+import "../App.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,11 +13,16 @@ const HorizontalScrollText = () => {
     const section = sectionRef.current;
     const text = textRef.current;
 
+    const isMobile = window.innerWidth < 768;
+    const scrollLength = isMobile
+      ? text.scrollWidth * 0.5 // scroll only 50% on mobile
+      : text.scrollWidth;      // full scroll on desktop
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
         start: "top top",
-        end: () => `+=${text.scrollWidth}`, // dynamically adjust to text width
+        end: () => `+=${scrollLength}`,
         scrub: true,
         pin: true,
         anticipatePin: 1,
@@ -25,7 +30,7 @@ const HorizontalScrollText = () => {
     });
 
     tl.to(text, {
-      x: () => `-${text.scrollWidth - window.innerWidth}px`,
+      x: () => `-${text.scrollWidth - window.innerWidth}`,
       ease: "none",
     });
 
@@ -38,14 +43,13 @@ const HorizontalScrollText = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-[22rm] md:h-screen overflow-hidden flex items-center"
+      className="relative px-[6rem] w-full pt-[22rem] pb-[12rem] overflow-hidden flex items-center "
     >
       <div
         ref={textRef}
-
-        className="bowlby-one-regular whitespace-nowrap text-white text-4xl md:text-[12rem] font-bold ml-[10rem] "
+        className=" absolute bowlby-one-regular whitespace-nowrap text-[#E9E3DC] text-[12rem] font-bold min-w-max  px-[2rem]"
       >
-       THE  BEST BURGER I'VE EVER HAD 🍔 &nbsp;&nbsp;
+        THE BEST BURGER I'VE EVER HAD 🍔 &nbsp;
       </div>
     </section>
   );

@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://kunalkarmavat.github.io/burger",
+  "homepage": "https://kunalkarmavat.github.io/Burger_Heavens/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

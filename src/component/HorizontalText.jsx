@@ -21,12 +21,12 @@ const HorizontalText = () => {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden mb-[2rem] sm:mb-[4rem]  py-[2rem] sm:py-[8rem] text-center text-3xl font-extrabold">
+    <div className="relative w-full overflow-hidden mb-[2rem] sm:mb-[6rem]  py-[2rem] sm:py-[8rem] text-center text-3xl font-extrabold">
       <h3
         ref={textRef}
-        className="whitespace-nowrap text-[#D1EF53] text-2xl sm:text-8xl absolute left-0"
+        className="whitespace-nowrap text-[#D1EF53] text-2xl sm:text-[7rem] absolute left-0"
       >
- 🍔 Taste. Sizzle. Repeat. | Burger Bliss Starts Here! 🥪
+ 🍔 THE BEST BURGER I'VE EVER HAD  🥪
       </h3>
     </div>
   );

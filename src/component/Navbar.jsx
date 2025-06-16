@@ -12,14 +12,13 @@ function Navbar() {
 
       {/* Desktop Menu */}
       <ul className="hidden sm:flex items-center space-x-12 text-sm">
-        <li><a href="#home">HOME</a></li>
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#menu">MENU</a></li>
-        <li><a href="#locations">LOCATIONS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+     
+
         <li>
           <button
-            className="bg-purple-300 text-black px-6 py-2 rounded"
+            className="bg-purple-300 text-black px-10 py-4 "
             style={{ background: '#B3A0CD' }}
           >
             ORDER ONLINE
