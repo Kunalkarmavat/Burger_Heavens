@@ -10,14 +10,15 @@ const HorizontalText = () => {
 
     gsap.fromTo(
       textRef.current,
-      { x: -textWidth },
+      { x: containerWidth },
       {
-        x: containerWidth,
-        duration: 14,
+        x: -textWidth,
+        duration: 24,
         ease: "linear",
         repeat: -1,
       }
     );
+    
   }, []);
 
   return (
@@ -26,7 +27,8 @@ const HorizontalText = () => {
         ref={textRef}
         className="whitespace-nowrap text-[#D1EF53] text-2xl sm:text-[7rem] absolute left-0"
       >
- 🍔 THE BEST BURGER I'VE EVER HAD  🥪
+ 🍔 THE BEST BURGER I'VE EVER HAD 🥪
+ 🍔 THE BEST BURGER I'VE EVER HAD 🥪 
       </h3>
     </div>
   );
